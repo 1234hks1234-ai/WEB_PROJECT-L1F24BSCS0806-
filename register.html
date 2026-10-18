@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feane - Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-group">
+                <img src="images/logo.svg" alt="Feane logo" class="logo">
+                <span class="brand">Feane</span>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="media.html">Media</a>
+                <a href="register.html" class="active">Register</a>
+            </div>
+
+            <a href="media.html" class="btn">Order Online</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-intro">
+            <p class="label">Book a table</p>
+            <h1>Create your account</h1>
+            <p>Register to reserve a table, save your favourite dishes and get weekly offers.</p>
+            <p>Fields marked with a star are required.</p>
+        </section>
+
+        <form action="#" method="post" enctype="multipart/form-data">
+
+            <!-- PERSONAL DETAILS -->
+            <fieldset>
+                <legend>Personal details</legend>
+
+                <label for="fullname" class="req">Full name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Ali Khan"
+                       required minlength="3" maxlength="40">
+
+                <label for="email" class="req">Email</label>
+                <input type="email" id="email" name="email" placeholder="name@company.com" required>
+
+                <label for="password" class="req">Password (8 to 20 characters)</label>
+                <input type="password" id="password" name="password" placeholder="Enter a password"
+                       required minlength="8" maxlength="20">
+
+                <label for="profile">Profile link</label>
+                <input type="url" id="profile" name="profile" placeholder="https://example.com/ali">
+
+                <label for="photo">Profile photo</label>
+                <input type="file" id="photo" name="photo" accept="image/*">
+            </fieldset>
+
+            <!-- BOOKING DETAILS -->
+            <fieldset>
+                <legend>Booking details</legend>
+
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" min="2026-10-18" max="2027-12-31">
+
+                <label for="time">Time</label>
+                <input type="time" id="time" name="time" min="12:00" max="23:00">
+
+                <label for="guests">Number of guests (1 to 20)</label>
+                <input type="number" id="guests" name="guests" min="1" max="20" value="2">
+
+                <label for="category">Favourite dish category</label>
+                <select id="category" name="category">
+                    <option value="burgers" selected>Burgers</option>
+                    <option value="pizzas">Pizzas</option>
+                    <option value="pastas">Pastas</option>
+                    <option value="salads">Salads</option>
+                    <option value="drinks">Drinks</option>
+                </select>
+
+                <label for="spice">Spice level (1 to 10)</label>
+                <input type="range" id="spice" name="spice" min="1" max="10" value="5">
+            </fieldset>
+
+            <!-- PREFERENCES -->
+            <fieldset>
+                <legend>Preferences</legend>
+
+                <p class="group-title">Dining type</p>
+                <div class="choices">
+                    <label class="choice"><input type="radio" name="dining" value="dine-in" checked> Dine-in</label>
+                    <label class="choice"><input type="radio" name="dining" value="takeaway"> Takeaway</label>
+                    <label class="choice"><input type="radio" name="dining" value="delivery"> Delivery</label>
+                </div>
+
+                <p class="group-title">Extras</p>
+                <div class="choices">
+                    <label class="choice"><input type="checkbox" name="newsletter" value="yes" checked> Send me weekly offers</label>
+                    <label class="choice"><input type="checkbox" name="terms" value="yes" required> I accept the terms</label>
+                </div>
+
+                <label for="colour">Favourite colour</label>
+                <input type="color" id="colour" name="colour" value="#fdb92f">
+            </fieldset>
+
+            <!-- EXTRAS -->
+            <fieldset>
+                <legend>Extras</legend>
+
+                <label for="branch">Branch</label>
+                <input type="text" id="branch" name="branch" value="Lahore main branch" readonly>
+
+                <label for="promo">Promo code</label>
+                <input type="text" id="promo" name="promo" value="Not available yet" disabled>
+
+                <label for="requests">Special requests</label>
+                <textarea id="requests" name="requests" rows="5" maxlength="300"
+                          placeholder="Window seat, birthday cake, allergies…"></textarea>
+            </fieldset>
+
+            <div class="actions">
+                <button type="submit">Register</button>
+                <button type="reset">Reset form</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

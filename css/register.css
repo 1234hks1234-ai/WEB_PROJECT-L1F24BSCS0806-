@@ -1,0 +1,279 @@
+/* ---------- BASE ---------- */
+* {
+    box-sizing: border-box;
+}
+body{
+    background-color:#0b1020;
+}
+h1{
+    color:antiquewhite
+}
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 20px 80px;
+}
+
+/* pseudo-element: text colour when the visitor highlights text */
+::selection {
+    background-color: #fdb92f;
+    color: #0b1020;
+}
+
+/* ---------- INTRO ---------- */
+.label {
+    color: #fdb92f;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+}
+
+.form-intro h1 {
+    font-size: 44px;
+    font-weight: 800;
+    font-style: italic;
+    margin: 0 0 15px;
+}
+
+/* general sibling combinator: every p that follows the h1 */
+.form-intro h1 ~ p {
+    color: #d6d3cc;
+    line-height: 1.6;
+    margin: 0 0 8px;
+}
+
+/* pseudo-element: short yellow bar under the heading */
+.form-intro h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    margin-top: 12px;
+    background-color: #fdb92f;
+    border-radius: 2px;
+}
+
+/* ---------- FORM LAYOUT ---------- */
+/* child combinator: only fieldsets directly inside the form */
+form > fieldset {
+    margin: 0;
+    padding: 25px;
+    background-color: rgba(21, 27, 43, 0.95);
+    border: 1px solid rgba(253, 185, 47, 0.3);
+    border-radius: 20px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+
+legend {
+    padding: 0 12px;
+    color: #fdb92f;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+/* descendant combinator: every label inside a fieldset */
+fieldset label {
+    display: block;
+    margin: 14px 0 6px;
+    color: #d6d3cc;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* pseudo-element: star after the label text of required fields */
+.req::after {
+    content: " *";
+    color: #fdb92f;
+}
+
+/* ---------- INPUTS (attribute selectors) ---------- */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 11px 14px;
+    background-color: #0b1020;
+    color: #ffffff;
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+/* adjacent sibling combinator: a field directly after its label */
+label + select,
+label + textarea {
+    margin-bottom: 4px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* pseudo-element: placeholder text */
+input::placeholder,
+textarea::placeholder {
+    color: #8b8fa3;
+}
+
+/* pseudo-element: the button inside the file input */
+input[type="file"]::file-selector-button {
+    margin-right: 12px;
+    padding: 6px 14px;
+    background-color: #fdb92f;
+    color: #0b1020;
+    border: none;
+    border-radius: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+input[type="color"] {
+    width: 70px;
+    height: 44px;
+    padding: 3px;
+    background-color: #0b1020;
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input[type="range"] {
+    width: 100%;
+    accent-color: #fdb92f;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    accent-color: #fdb92f;
+}
+
+/* ---------- READONLY AND DISABLED ---------- */
+input[readonly] {
+    background-color: #151b2b;
+    color: #aab;
+    border-style: dotted;
+}
+
+input[disabled] {
+    opacity: 0.45;
+    border-style: dashed;
+    cursor: not-allowed;
+}
+
+/* ---------- RADIO AND CHECKBOX GROUPS ---------- */
+.group-title {
+    margin: 14px 0 4px;
+    color: #d6d3cc;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.choices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 22px;
+}
+
+fieldset .choice {
+    display: flex;
+    align-items: center;
+    margin: 6px 0;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+/* ---------- PSEUDO-CLASSES: hover, focus, valid, invalid ---------- */
+input:hover,
+select:hover,
+textarea:hover {
+    border-color: rgba(253, 185, 47, 0.6);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #fdb92f;
+    box-shadow: 0 0 0 3px rgba(253, 185, 47, 0.25);
+}
+
+/* only after the visitor typed something (placeholder no longer shown) */
+input[type="text"]:not(:placeholder-shown):valid,
+input[type="email"]:not(:placeholder-shown):valid,
+input[type="password"]:not(:placeholder-shown):valid,
+input[type="url"]:not(:placeholder-shown):valid {
+    border-color: #3fae6a;
+}
+
+input[type="text"]:not(:placeholder-shown):invalid,
+input[type="email"]:not(:placeholder-shown):invalid,
+input[type="password"]:not(:placeholder-shown):invalid,
+input[type="url"]:not(:placeholder-shown):invalid {
+    border-color: #e5534b;
+}
+
+/* ---------- BUTTONS ---------- */
+.actions {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    padding: 13px 34px;
+    border: 2px solid #fdb92f;
+    border-radius: 30px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: #fdb92f;
+    color: #0b1020;
+}
+
+button[type="reset"] {
+    background-color: transparent;
+    color: #fdb92f;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(253, 185, 47, 0.3);
+}
+
+button:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
+
+/* ---------- SMALL SCREENS ---------- */
+@media (max-width: 800px) {
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-intro h1 {
+        font-size: 34px;
+    }
+}
