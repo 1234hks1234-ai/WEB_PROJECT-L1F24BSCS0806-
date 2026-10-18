@@ -9,66 +9,11 @@ img {
 }
 
 /* ---------- STICKY HEADER + NAVBAR ---------- */
-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background-color: #0b1020;
-}
 
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 10%;
-}
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-nav a:hover {
-    color: #fdb92f;
-}
-
-nav a.active {
-    color: #fdb92f;
-    border-bottom: 2px solid #fdb92f;
-    padding-bottom: 4px;
-}
-
-.logo-group {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: 180px;
-}
-
-.logo {
-    width: 50px;
-    opacity: 1;
-}
-
-.brand {
-    color: white;
-    font-weight: 800;
-    font-size: 28px;
-}
-
-.nav-links a {
-    margin: 0 20px;
-}
 
 /* Order Online button: same width as logo group so links stay centered */
-nav .btn {
-    width: 180px;
-    padding: 10px 0;
-    text-align: center;
-    box-sizing: border-box;
-    color: black;
-}
+
 
 /* ---------- HERO LAYERING ---------- */
 .clss1 {

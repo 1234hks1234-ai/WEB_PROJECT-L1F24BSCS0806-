@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feane - Media</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+    <!-- BACKGROUND VIDEO (muted so browsers allow autoplay) -->
+    <video class="bg-video" autoplay muted loop playsinline>
+        <source src="media/cooking.mp4" type="video/mp4">
+    </video>
+    <div class="bg-overlay"></div>
+
+    <header>
+        <nav>
+            <div class="logo-group">
+                <img src="images/logo.svg" alt="Feane logo" class="logo">
+                <span class="brand">Feane</span>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="media.html" class="active">Media</a>
+                <a href="register.html">Register</a>
+            </div>
+
+            <a href="media.html" class="btn">Order Online</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- INTRO -->
+        <section class="intro">
+            <p class="label">Hot Deals</p>
+            <h1>Today's Special Offers</h1>
+            <p class="intro-text">
+                Grab these limited-time culinary discounts crafted by our
+                executive chefs, expiring soon!
+            </p>
+        </section>
+
+        <!-- OFFER CARDS -->
+        <section class="offers">
+            <div class="card">
+                <div class="card-photo">
+                    <img src="images/offer1.jpg" alt="Double cheese burger">
+                    <span class="hot">Hot Offer</span>
+                </div>
+
+                <div class="card-body">
+                    <span class="timer">03:33:09</span>
+                    <span class="tag">Limited Promo</span>
+                    <h3>Tasty Thursdays</h3>
+                    <p>Enjoy 20% off on all double cheese and gourmet burgers.</p>
+                    <div class="card-bottom">
+                        <p class="discount">20% <span>off</span></p>
+                        <a href="#" class="btn">Order Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-photo">
+                    <img src="images/offer2.jpg" alt="Pizza with melted cheese">
+                    <span class="hot">Hot Offer</span>
+                </div>
+
+                <div class="card-body">
+                    <span class="timer">07:33:09</span>
+                    <span class="tag">Weekly Special</span>
+                    <h3>Pizza Days</h3>
+                    <p>Authentic thin-crust pizza with stretching melted mozzarella and fresh basil.</p>
+                    <div class="card-bottom">
+                        <p class="discount">15% <span>off</span></p>
+                        <a href="#" class="btn">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INFO BLOCK (float + unordered list) -->
+        <section class="info">
+            <img src="images/info.jpg" alt="Chef preparing food in our kitchen" class="info-img">
+            <h2>Why Choose Feane</h2>
+            <p>
+                Every dish is prepared fresh to order by our chefs, using
+                quality ingredients and recipes we are proud of. Here is
+                what makes us different:
+            </p>
+            <ul>
+                <li>Fresh ingredients delivered daily</li>
+                <li>Prepared by experienced chefs</li>
+                <li>Fast delivery and friendly service</li>
+                <li>New weekly offers and discounts</li>
+            </ul>
+        </section>
+
+        <!-- HOW TO ORDER (ordered list) -->
+        <section class="how-to">
+            <h2>How To Order</h2>
+            <ol>
+                <li>Choose your favourite dish from the menu.</li>
+                <li>Click the Order Now button on the offer you like.</li>
+                <li>Confirm your address and payment method.</li>
+                <li>Sit back and enjoy your meal.</li>
+            </ol>
+        </section>
+
+        <!-- PRICE TABLE -->
+        <section class="prices">
+            <h2>Offer Prices</h2>
+            <div class="table-wrap">
+                <table>
+                    <caption>Current special offers and prices</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Item</th>
+                            <th scope="col">Size</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Discount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Double Cheese Burger</td>
+                            <td>Regular</td>
+                            <td>$8.00</td>
+                            <td>20%</td>
+                        </tr>
+                        <tr>
+                            <td>Margherita Pizza</td>
+                            <td>Medium</td>
+                            <td>$12.00</td>
+                            <td>15%</td>
+                        </tr>
+                        <tr>
+                            <td>Crispy Fries</td>
+                            <td>Large</td>
+                            <td>$4.00</td>
+                            <td>10%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- VISIBLE VIDEO WITH CONTROLS -->
+        
+
+        <!-- VISIBLE AUDIO WITH CONTROLS -->
+       
+    </main>
+
+    <!-- BACKGROUND MUSIC (starts only when the visitor clicks) -->
+    <button id="sound-btn" class="sound-btn">Play music</button>
+    <audio id="bg-audio" loop>
+        <source src="media/chef.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const audio = document.getElementById("bg-audio");
+        const btn = document.getElementById("sound-btn");
+        audio.volume = 1;
+
+        btn.addEventListener("click", function () {
+            if (audio.paused) {
+                audio.play();
+                btn.textContent = "Pause music";
+            } else {
+                audio.pause();
+                btn.textContent = "Play music";
+            }
+        });
+    </script>
+</body>
+</html>
