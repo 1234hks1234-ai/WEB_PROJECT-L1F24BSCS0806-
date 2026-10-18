@@ -1,0 +1,190 @@
+body {
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+img {
+    opacity: 0.1;
+}
+
+/* ---------- STICKY HEADER + NAVBAR ---------- */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #0b1020;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10%;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #fdb92f;
+}
+
+nav a.active {
+    color: #fdb92f;
+    border-bottom: 2px solid #fdb92f;
+    padding-bottom: 4px;
+}
+
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 180px;
+}
+
+.logo {
+    width: 50px;
+    opacity: 1;
+}
+
+.brand {
+    color: white;
+    font-weight: 800;
+    font-size: 28px;
+}
+
+.nav-links a {
+    margin: 0 20px;
+}
+
+/* Order Online button: same width as logo group so links stay centered */
+nav .btn {
+    width: 180px;
+    padding: 10px 0;
+    text-align: center;
+    box-sizing: border-box;
+    color: black;
+}
+
+/* ---------- HERO LAYERING ---------- */
+.clss1 {
+    position: relative;
+}
+
+.clss1 > img {
+    display: block;
+    width: 100%;
+    height: calc(100vh - 90px);
+    object-fit: cover;
+}
+
+.hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    box-sizing: border-box;
+    color: white;
+}
+
+.hero-content {
+    width: 55%;
+}
+
+/* ---------- HERO TEXT ---------- */
+.badge {
+    display: inline-block;
+    color: #fdb92f;
+    background-color: rgba(253, 185, 47, 0.1);
+    border: 1px solid #fdb92f;
+    border-radius: 30px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.tagline {
+    color: #fdb92f;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 58px;
+    font-weight: 800;
+    margin: 10px 0 20px;
+}
+
+.hero-text {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #d6d3cc;
+    margin-bottom: 35px;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #fdb92f;
+    color: black;
+    border: 2px solid #fdb92f;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-content .btn {
+    margin-right: 15px;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #fdb92f;
+}
+
+/* ---------- HERO IMAGE + FRAME ---------- */
+.hero-image {
+    width: 40%;
+}
+
+.frame {
+    position: relative;
+    padding: 15px;
+    background-color: rgba(15, 20, 32, 0.85);
+    border: 3px solid rgba(253, 185, 47, 0.3);
+    border-radius: 24px;
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    opacity: 1;
+    border-radius: 14px;
+}
+
+/* ---------- "100% CHEF CERTIFIED" BADGE ---------- */
+.certified {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    background-color: #0b1020;
+    color: #fdb92f;
+    border: 1px solid rgba(253, 185, 47, 0.5);
+    border-radius: 30px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 700;
+}

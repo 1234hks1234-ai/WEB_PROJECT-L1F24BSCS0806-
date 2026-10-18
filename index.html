@@ -1,61 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Feane - Home</title>
-        <link rel="stylesheet" href="css/home.css">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <title>Feane - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-group">
+                <img src="images/logo.svg" alt="Feane logo" class="logo">
+                <span class="brand">Feane</span>
+            </div>
 
-        <header>
-            <nav>
-                <a href="index.html">Home</a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
                 <a href="media.html">Media</a>
                 <a href="register.html">Register</a>
-            </nav>
-        </header>
+            </div>
+
+            <a href="media.html" class="btn">Order Online</a>
+        </nav>
+    </header>
+
+    <div class="clss1">
+        <img src="images/burger.jpg" alt="">
 
         <section class="hero" id="hero">
             <div class="hero-content">
                 <p class="badge">Chef's Masterpiece</p>
                 <p class="tagline">Indulgent . Premium . Fresh</p>
                 <h1>Fast Food Restaurant</h1>
-                <p>
+                <p class="hero-text">
                     Enjoy delicious burgers made with fresh ingredients,
                     rich flavours, and passion. Visit us for a memorable
                     dining experience with food you'll love.
                 </p>
 
-                <a href="media.html" class="btn">Order Now</a>
-                <a href="register.html" class="btn">Book A Table</a>
+                <a href="media.html" class="btn">Order Now &rarr;</a>
+                <a href="register.html" class="btn btn-outline">Book A Table</a>
             </div>
 
             <div class="hero-image">
-                <img src="images/burger.jpg" alt="Freshly prepared burger with melted cheese, lettuce, and tomato">
+                <div class="frame">
+                    <img src="images/bur.jpg" alt="Freshly prepared burger with melted cheese, lettuce, and tomato">
+                    <span class="certified">100% Chef Certified</span>
+                </div>
             </div>
         </section>
-
-        <section class="offers">
-            <h2>Our Special Offers</h2>
-            <div class="offers-container">
-                <article class="offer">
-                    <h3>Family Burger Deal</h3>
-                    <p>Enjoy delicious burgers with your family and friends</p>
-                    <p><strong>20% off</strong></p>
-                </article>
-
-                <article class="offer">
-                    <h3>Weekend Special</h3>
-                    <p>Make your weekends tastier with our freshly prepared meals.</p>
-                    <p><strong>20% off</strong></p>
-                </article>
-            </div>
-        </section>
-
-        <footer>
-            <p>&copy; 2026 Feane Restaurant. All rights reserved.</p>
-        </footer>
-
-    </body>
+    </div>
+</body>
 </html>
