@@ -1,60 +1,182 @@
-
-*{box-sizing: border-box;}
-body{
-    background-color: black;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    color: #ffffff;
+/* ---------- BASE ---------- */
+* {
+    box-sizing: border-box;
 }
 
-.services	{padding: 60px 40px;
-text-align: center;}
-.services h1	{font-size: 44px;
-     margin: 0 0 12px;
-}	
- .services > p{	color: #cbd5e1; 
+body {
+    margin: 0;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* ---------- INTRO ---------- */
+.services {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.services .section-label {
+    color: #ffb81c;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 0 0 8px;
+}
+
+.services h1 {
+    font-size: 44px;
+    font-weight: 800;
+    margin: 0 0 12px;
+}
+
+.services > p {
+    color: #cbd5e1;
     margin-bottom: 40px;
 }
 
-.cards-container	{display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 24px;
-}
-.card{
+/* ---------- FILTER BAR (flexbox, two levels) ---------- */
+.filter-bar {
     display: flex;
-    flex:1 1 280px;
-    max-width: 360px;
-    background-color:#343434 ;
-    border-radius: 16px;
-    overflow:hidden;
-    min-height:fit-content;
-    flex-direction: column;
-    box-shadow:0 8px 20px rgba(0,0,0,0.4);
-    
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    max-width: 1400px;
+    margin: 0 auto 40px;
+    padding: 16px 24px;
+    background-color:#343434;
+    border-radius: 20px;
 }
-.card img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
-}
-.card h2{
-    font-size: 22px;
-    color:#ffb81c;
-     margin: 16px 20px 8px;
-}.card p	{color:white;
-    margin: 0 20px 16px;
-    flex-grow: 1;
-}
-.card-link	{align-self: flex-start;
-    
-    margin: 0 20px 20px	;
-	padding: 10px 20px;
-	background-color: #ffb81c;
-     color: #0b0f19	;
-	border-radius: 25px;
-    text-decoration: none;
-     font-weight: 600;
-     align-self: center;
-    }
 
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-btn {
+    padding: 12px 24px;
+    background-color: black;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #3a4358;
+}
+
+.filter-btn.active {
+    background-color: #ffb81c;
+    color: #0b0f19;
+}
+
+.filter-tools {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+input[type="search"],
+select {
+    padding: 12px 16px;
+    background-color: black;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-family: inherit;
+}
+
+input[type="search"]::placeholder {
+    color: #94a3b8;
+}
+
+input[type="search"]:focus {
+    outline: 2px solid #ffb81c;
+}
+
+/* ---------- CARDS (flexbox, nested) ---------- */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 280px;
+    max-width: 360px;
+    background-color: #343434;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.card h2 {
+    font-size: 22px;
+    color: #ffb81c;
+    margin: 16px 20px 8px;
+}
+
+.card p {
+    flex-grow: 1;
+    margin: 0 20px 16px;
+}
+
+.card-link {
+    align-self: center;
+    margin: 0 20px 20px;
+    padding: 10px 20px;
+    background-color: #ffb81c;
+    color: #0b0f19;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* ---------- HOVER EFFECTS (transform + transition) ---------- */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.6);
+}
+
+.card:hover img {
+    transform: scale(1.08);
+}
+
+.card-link:hover {
+    background-color: #ffd15c;
+    transform: scale(1.05);
+}
+
+/* ---------- NAV OVERRIDE (this page's own look) ---------- */
+header {
+    border-bottom: 2px solid #ffb81c;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    padding: 24px;
+    text-align: center;
+    color: #cbd5e1;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

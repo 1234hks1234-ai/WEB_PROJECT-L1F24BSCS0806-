@@ -3,95 +3,107 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Services</title>
+        <title>Feane - Services</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
-         <link rel="stylesheet" href="css/nav.css">
-
+        <link rel="stylesheet" href="css/nav.css">
         <link rel="stylesheet" href="css/services.css">
     </head>
     <body>
 
         <header>
             <nav>
-                <!-- same links as your other pages, plus Services -->
-            
-            <div class="logo-group">
-                <img src="images/logo.svg" alt="Feane logo" class="logo">
-                <span class="brand">Feane</span>
-            </div>
+                <div class="logo-group">
+                    <img src="images/logo.svg" alt="Feane logo" class="logo">
+                    <span class="brand">Feane</span>
+                </div>
 
-            <div class="nav-links">
-                <a href="index.html" >Home</a>
-                <a href="media.html">Media</a>
-                <a href="register.html">Register</a>
-                <a href="services.html" class="active">Services</a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="media.html">Media</a>
+                    <a href="register.html">Register</a>
+                    <a href="services.html" class="active">Services</a>
+                </div>
 
-            </div>
-
-            <a href="media.html" class="btn">Order Online</a>
-        
+                <a href="media.html" class="btn">Order Online</a>
             </nav>
         </header>
 
         <section class="services">
-            <h1>
-                        Our Delicious Menu</h1>
-                  <p>OUR DISHES</p>
+            <p class="section-label">Our Dishes</p>
+            <h1>Our Delicious Menu</h1>
+            <p>Fresh, hot and made to order. Pick a favourite below.</p>
+
+            <div class="filter-bar">
+                <div class="filter-buttons">
+                    <button class="filter-btn active">All Items</button>
+                    <button class="filter-btn">Burgers</button>
+                    <button class="filter-btn">Pizza</button>
+                    <button class="filter-btn">Salad</button>
+                    <button class="filter-btn">Pasta</button>
+                    <button class="filter-btn">Juice</button>
+                    <button class="filter-btn">Sandwich</button>
+                </div>
+
+                <div class="filter-tools">
+                    <input type="search" placeholder="Search our menu..." aria-label="Search the menu">
+                    <select aria-label="Sort the menu">
+                        <option>Featured Selection</option>
+                        <option>Name A to Z</option>
+                    </select>
+                </div>
+            </div>
 
             <div class="cards-container">
 
                 <article class="card">
-                    <img src="images/BURGER - Copy.jpg" alt="Juicy burger">
+                    <img src="images/BURGER - Copy.jpg" alt="Cheeseburger with fries on a dark wooden board">
                     <h2>Classic Burger</h2>
-                    <p>Enjoy a juicy burger with a tender patty, fresh lettuce, cheese, and our special sauce.</p></p>
-                    <a href="burger.html" class="card-link">Explore Burgers</a>
+                    <p>Enjoy a juicy burger with a tender patty, fresh lettuce, cheese, and our special sauce.</p>
+                    <a href="media.html" class="card-link">Explore Burgers</a>
                 </article>
 
-
-                <!-- repeat the article block 5 more times -->
-                 
-              <article class="card">
-                <img src="images/piza.jpg" alt="Fresh pizza">
-                <h2>Pizza</h2>
-                <p>Enjoy our delicious pizza topped with melted cheese, fresh vegetables, and flavorful toppings.</p>
-                 <a href="pizza.html" class="card-link">Explore Pizza</a>
-              </article>
-                                                                          
-              <article class="card">
-                 <img src="images/SL.jpg" alt="Fresh salad">
-                 <h2>Fresh Salad</h2>
-                 <p>A refreshing mix of fresh vegetables and crisp greens, perfect for a light and healthy meal.</p>
-                    <a href="salad.html" class="card-link">Explore Salad</a>
-                </article>
-                   
                 <article class="card">
-                 <img src="images/pasta.jpg" alt="Delicious pasta">
-                  <h2>Italian Pasta</h2>
-                  <p>Delight in perfectly cooked pasta tossed with rich sauce, herbs, and delicious seasonings.</p>
-                  <a href="pasta.html" class="card-link">Explore Pasta</a>
-              </article>
-  
-             
-               <article class="card">
-                 <img src="images/drinks.jfif" alt="Fresh fruit juice">
-                  <h2>Fresh Juice</h2>
-                   <p>Enjoy refreshing fruit juice made with fresh fruits, full of natural flavor.</p>
-                  <a href="juice.html" class="card-link">Explore Juices</a>
+                    <img src="images/piza.jpg" alt="Margherita pizza with basil leaves">
+                    <h2>Pizza</h2>
+                    <p>Enjoy our delicious pizza topped with melted cheese, fresh vegetables, and flavorful toppings.</p>
+                    <a href="media.html" class="card-link">Explore Pizza</a>
                 </article>
-                
-              <article class="card">
-                <img src="images/sand.jpg" alt="Club sandwich">
-                  <h2>Club Sandwich</h2>
-                   <p>A delicious triple-layer sandwich filled with chicken, fresh lettuce, cheese, and creamy mayonnaise.</p>
-                    <a href="club-sandwich.html" class="card-link">Explore Sandwiches</a>
-               </article>
 
+                <article class="card">
+                    <img src="images/S.jpg" alt="Fresh salad on a black plate">
+                    <h2>Fresh Salad</h2>
+                    <p>A refreshing mix of fresh vegetables and crisp greens, perfect for a light and healthy meal.</p>
+                    <a href="media.html" class="card-link">Explore Salad</a>
+                </article>
+
+                <article class="card">
+                    <img src="images/pasta.jpg" alt="Bowl of pasta with tomato sauce">
+                    <h2>Italian Pasta</h2>
+                    <p>Delight in perfectly cooked pasta tossed with rich sauce, herbs, and delicious seasonings.</p>
+                    <a href="media.html" class="card-link">Explore Pasta</a>
+                </article>
+
+                <article class="card">
+                    <img src="images/drinks.jfif" alt="Colourful fruit drinks in glasses">
+                    <h2>Fresh Juice</h2>
+                    <p>Enjoy refreshing fruit juice made with fresh fruits, full of natural flavor.</p>
+                    <a href="media.html" class="card-link">Explore Juices</a>
+                </article>
+
+                <article class="card">
+                    <img src="images/sand.jpg" alt="Toasted club sandwich on a wooden board">
+                    <h2>Club Sandwich</h2>
+                    <p>A delicious triple-layer sandwich filled with chicken, fresh lettuce, cheese, and creamy mayonnaise.</p>
+                    <a href="media.html" class="card-link">Explore Sandwiches</a>
+                </article>
 
             </div>
         </section>
 
-
+        <footer>
+            <p>&copy; 2026 Feane Restaurant. All rights reserved.</p>
+        </footer>
 
     </body>
 </html>
