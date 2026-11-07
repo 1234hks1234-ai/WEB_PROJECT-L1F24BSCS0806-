@@ -1,0 +1,253 @@
+
+/* ---------- BASE ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(180deg, #000000, #1a1405);
+}
+
+/* ---------- INTRO ---------- */
+
+.portfolio {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+.section-label {
+    margin: 0 0 8px;
+    color: #ffb81c;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.portfolio h1 {
+    margin: 0 0 12px;
+    font-size: 44px;
+    font-weight: 800;
+}
+
+.intro {
+    margin: 0 0 40px;
+    color: #cbd5e1;
+}
+
+/* ---------- GRID MOSAIC ---------- */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 220px;
+    gap: 16px;
+
+    grid-template-areas:
+        "a a b c"
+        "a a d d"
+        "e f g g"
+        "e h g g";
+}
+
+/* Assign grid areas */
+
+.gallery-item:nth-child(1) { grid-area: a; }
+.gallery-item:nth-child(2) { grid-area: b; }
+.gallery-item:nth-child(3) { grid-area: c; }
+.gallery-item:nth-child(4) { grid-area: d; }
+.gallery-item:nth-child(5) { grid-area: e; }
+.gallery-item:nth-child(6) { grid-area: f; }
+.gallery-item:nth-child(7) { grid-area: g; }
+.gallery-item:nth-child(8) { grid-area: h; }
+
+/* ---------- GALLERY ITEMS ---------- */
+
+.gallery-item {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid rgba(253, 185, 47, 0.3);
+    border-radius: 16px;
+
+    opacity: 0;
+
+    animation-name: fadeUp;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+
+    transition: box-shadow 0.3s ease;
+}
+
+/* ---------- IMAGE ---------- */
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* ---------- CAPTIONS ---------- */
+
+.gallery-item figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 14px 16px;
+    font-size: 14px;
+    color: #ffffff;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.85)
+    );
+}
+
+/* ---------- HOVER EFFECT ---------- */
+
+.gallery-item:hover {
+    box-shadow: 0 8px 24px rgba(253, 185, 47, 0.25);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+/* ---------- FADE UP ANIMATION ---------- */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- STAGGERED DELAYS ---------- */
+
+.gallery-item:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.gallery-item:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.gallery-item:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+.gallery-item:nth-child(4) {
+    animation-delay: 1.2s;
+}
+
+.gallery-item:nth-child(5) {
+    animation-delay: 1.6s;
+}
+
+.gallery-item:nth-child(6) {
+    animation-delay: 2.0s;
+}
+
+.gallery-item:nth-child(7) {
+    animation-delay: 2.5s;
+}
+
+.gallery-item:nth-child(8) {
+    animation-delay: 3.0s;
+}
+
+/* ---------- HEADER ---------- */
+
+header {
+    box-shadow: 0 4px 20px rgba(253, 185, 47, 0.25);
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    padding: 24px;
+    text-align: center;
+    color: #cbd5e1;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ---------- TABLET RESPONSIVE ---------- */
+
+@media (max-width: 900px) {
+
+    .portfolio {
+        padding: 40px 20px;
+    }
+
+    .portfolio h1 {
+        font-size: 34px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-areas:
+            "a a"
+            "a a"
+            "b c"
+            "d d"
+            "e f"
+            "e h"
+            "g g"
+            "g g";
+    }
+}
+
+/* ---------- MOBILE RESPONSIVE ---------- */
+
+@media (max-width: 600px) {
+
+    .portfolio {
+        padding: 30px 16px;
+    }
+
+    .portfolio h1 {
+        font-size: 28px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        grid-template-areas: none;
+        grid-auto-rows: 240px;
+    }
+
+    .gallery-item:nth-child(n) {
+        grid-area: auto;
+    }
+}
+
+/* ---------- REDUCED MOTION ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .gallery-item {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    .gallery-item img {
+        transition: none;
+    }
+}
