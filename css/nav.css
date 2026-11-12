@@ -59,3 +59,18 @@ nav a.active {
     text-decoration: none;
     font-weight: bold;
 }
+.nav-links a.active {
+    color: #ffb81c;
+    border-bottom: 2px solid #ffb81c;
+}/* ---------- HEADER GOLDEN GLOW ---------- */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #000000;
+
+    border-bottom: 1px solid rgba(253, 185, 47, 0.25);
+
+    box-shadow: 0 5px 20px rgba(253, 185, 47, 0.2);
+}

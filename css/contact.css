@@ -1,0 +1,185 @@
+/* ---------- BASE ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* ---------- PAGE LAYOUT (grid: two columns) ---------- */
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+/* ---------- ABOUT (flexbox inside) ---------- */
+.section-label {
+    margin: 0 0 8px;
+    color: #ffb81c;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.about h1 {
+    margin: 0 0 16px;
+    font-size: 44px;
+    font-weight: 800;
+}
+
+.about p {
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 30px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.info-list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 18px;
+    border: 1px solid rgba(253, 185, 47, 0.3);
+    border-radius: 14px;
+}
+
+.info-title {
+    color: #ffb81c;
+    font-weight: 700;
+}
+
+/* ---------- FORM CARD ---------- */
+.form-card {
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.95);
+    border: 1px solid rgba(253, 185, 47, 0.3);
+    border-radius: 20px;
+}
+
+.form-card h2 {
+    margin: 0 0 20px;
+    color: #ffb81c;
+}
+
+form {
+    display: grid;
+    gap: 8px;
+}
+
+label {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #d6d3cc;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #ffb81c;
+    box-shadow: 0 0 0 3px rgba(253, 185, 47, 0.25);
+}
+
+.hint {
+    min-height: 18px;
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+.hint.valid {
+    color: #3fae6a;
+}
+
+.hint.invalid,
+.hint.warning {
+    color: #e5534b;
+}
+
+button {
+    margin-top: 14px;
+    padding: 13px 30px;
+    background-color: #ffb81c;
+    color: #0b0f19;
+    border: none;
+    border-radius: 30px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+#form-message {
+    margin: 10px 0 0;
+    color: #3fae6a;
+    font-weight: 600;
+}
+
+/* ---------- NAV OVERRIDE (this page's own look) ---------- */
+header {
+    background: linear-gradient(90deg, #000000, #1a1405);
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    padding: 24px;
+    text-align: center;
+    color: #cbd5e1;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ---------- MEDIA QUERY 1: tablet ---------- */
+@media (max-width: 900px) {
+    .contact {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+    }
+}
+
+/* ---------- MEDIA QUERY 2: phone ---------- */
+@media (max-width: 600px) {
+    .about h1 {
+        font-size: 32px;
+    }
+
+    .info-list li {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .form-card {
+        padding: 20px;
+    }
+}
